@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+    attributes:
+      post:
+        genre: ジャンル
+        title: タイトル
+        code: コード
