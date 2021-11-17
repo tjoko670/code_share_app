@@ -1,3 +1,65 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.post {
+  border-bottom: 1px #000 solid;
+  padding: 15px 60px;
+  position: relative;
+}
+
+.code {
+  border: 1px #000 solid;
+  margin: 0 10px;
+}
+
+p{
+  margin: 10px 0;
+}
+
+h2.post-title{
+  text-decoration: underline;
+  padding: 0 60px;
+}
+
+.highlight{
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.form{
+}
+
+.form_label{
+  width:80px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.form_contents{
+  display: inline-block;
+}
+
+.form_submit{
+  margin-left:764px;
+}
+
+.global-menu{
+  font-size: 15px;
+}
+
+.global-menu:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.gleft{
+  float: left;
+}
+
+
+.gright{
+  float: right;
+}
+
+h1 {
+  font-family: system-ui;
+  font-size: 44px;
+}

@@ -1,8 +1,21 @@
-<% if user_signed_in? %>
-  <%= link_to "アカウント編集", edit_user_registration_path %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"} %>
-  <%= "【ログイン中のユーザー】#{current_user.email}" %>
-<% else %>
+<h1>micro code share</h1>
+<div class="global-menu">
+  <div class="gleft">
+    <%= link_to "micro code shareについて", root_path  %>
+    <%= link_to "投稿一覧", posts_path %>
+    <% if user_signed_in? %>
+      <%= link_to "新規投稿ページ", new_post_path %>
+  </div>
+  <div class="gright">
+    <%= "【アカウント】#{current_user.name}" %>
+    <%= link_to "編集", edit_user_registration_path %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"} %>
+  </div>
+  <% else %>
+</div>
+<div class="gright">
   <%= link_to "新規登録", new_user_registration_path %>
   <%= link_to "ログイン", new_user_session_path %>
+</div>
 <% end %>
+</div>

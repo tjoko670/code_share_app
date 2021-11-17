@@ -1,2 +1,17 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h2 class="post-title">投稿詳細</h2>
+<div class="post">
+<p>【投稿者】 <%= @post.user.name %></p>
+<p>【投稿日時】 <%= l @post.created_at %></p>
+<p>【言語】<%= @post.genre_i18n %></p>
+<p>【タイトル】<%= @post.title %></p>
+<p>【コード】</p>
+<%= markdown(render "markdown") %>
+<%#= safe_join(@post.code.split("\n"),tag(:br)) %>
+<% if current_user.id == @post.user_id %>
+  <p>
+    <%= link_to "編集", edit_post_path(@post) %>
+    <%= link_to "削除", post_path(@post), method: :delete, data: {confirm: "削除しますか？"} %>
+  </p>
+<% end %>
+<p><%= link_to "一覧へ戻る", posts_path %></p>
+</div>

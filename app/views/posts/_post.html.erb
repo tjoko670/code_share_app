@@ -1,0 +1,15 @@
+<div class="post">
+  <p>【言語】 <%= post.genre_i18n %></p>
+  <p>【タイトル】<%= post.title %> </p>
+  <p>【コード】</p>
+  <div class="code">
+    <% @post = post %>
+    <%= markdown(render "markdown") %>
+  </div>
+  <% if user_signed_in? %>
+    <p>
+      <%= link_to "詳細へ", post %>
+    </p>
+  <% end %>
+
+</div>

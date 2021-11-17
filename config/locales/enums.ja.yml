@@ -1,0 +1,19 @@
+ja:
+  enums:
+    post:
+      genre:
+        html: "HTML"
+        css: "CSS"
+        js: "JavaScript"
+        ruby: "Ruby"
+        others: "その他"
+        java: "Java"
+        python: "Python"
+        php: "PHP"
+        c: "C"
+        cs: "C#"
+        cpp: "C++"
+        go: "Go"
+        kotlin: Kotlin
+        swift: "Swift"
+        r: "R"
